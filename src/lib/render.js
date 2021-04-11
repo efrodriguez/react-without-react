@@ -1,9 +1,9 @@
-import { App, AppEventListeners } from "../app";
+import { App } from "../app";
 
 const render = (root, state) => {
-  root.innerHTML = App(state);
+  root.innerHTML = App(state).render();
 
-  AppEventListeners().addButtonEventListener();
+  App(state).addEventListeners().addButtonEventListener();
 };
 
 export { render };
