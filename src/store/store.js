@@ -1,8 +1,11 @@
 const store = {
-  user: {
-    first_name: "John",
-    last_name: "Doe",
-  },
+  todos: [
+    {
+      id: 1,
+      text: "clean the room.",
+      completed: "false",
+    },
+  ],
 };
 
 export { store };
