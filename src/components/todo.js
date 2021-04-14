@@ -4,12 +4,9 @@ const Todo = (state) => {
   const handleCompletedClick = (event) => {
     const li = event.target.parentElement;
 
-    // TODO: optimize to not have to go through every element in the array
-    const updatedTodos = state.todos.map((todo) => {
-      if (todo.id === Number.parseInt(li.id)) {
-        return { ...todo, completed: !todo.completed };
-      }
-      return todo;
+    const todoIndex = state.todos.findIndex((todo) => todo.id === Number.parseInt(li.id));
+    const updatedTodos = Object.assign([...state.todos], {
+      [todoIndex]: { ...state.todos[todoIndex], completed: !state.todos[todoIndex].completed },
     });
 
     updateStore(state, { todos: updatedTodos });
@@ -18,13 +15,10 @@ const Todo = (state) => {
   const handleEditClick = (event) => {
     const li = event.target.parentElement;
 
-    // TODO: optimize to not have to go through every element in the array
-    const updatedTodos = state.todos.map((todo) => {
-      if (todo.id === Number.parseInt(li.id)) {
-        return { ...todo, editing: true };
-      }
-      return todo;
-    });
+    const todoIndex = state.todos.findIndex((todo) => todo.id === Number.parseInt(li.id));
+    const updatedTodos = Object.assign([...state.todos], {
+        [todoIndex]: { ...state.todos[todoIndex], editing: true },
+      });
 
     updateStore(state, { todos: updatedTodos });
   };
@@ -34,13 +28,10 @@ const Todo = (state) => {
 
     const newText = li.querySelector("input").value;
 
-    // TODO: optimize to not have to go through every element in the array
-    const updatedTodos = state.todos.map((todo) => {
-      if (todo.id === Number.parseInt(li.id)) {
-        return { ...todo, editing: false, text: newText };
-      }
-      return todo;
-    });
+    const todoIndex = state.todos.findIndex((todo) => todo.id === Number.parseInt(li.id));
+    const updatedTodos = Object.assign([...state.todos], {
+        [todoIndex]: { ...state.todos[todoIndex], editing: false, text: newText },
+      });
 
     updateStore(state, { todos: updatedTodos });
   };
