@@ -1,0 +1,13 @@
+li {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0px;
+}
+
+li > p {
+    width: 250px;
+}
+
+li > button {
+    margin: 0px 5px;
+}

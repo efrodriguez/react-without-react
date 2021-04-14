@@ -1,3 +1,4 @@
+import "./app.css";
 import { TodoList } from "./components/todoList";
 
 const App = (state) => {
