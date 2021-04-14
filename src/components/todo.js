@@ -17,8 +17,8 @@ const Todo = (state) => {
 
     const todoIndex = state.todos.findIndex((todo) => todo.id === Number.parseInt(li.id));
     const updatedTodos = Object.assign([...state.todos], {
-        [todoIndex]: { ...state.todos[todoIndex], editing: true },
-      });
+      [todoIndex]: { ...state.todos[todoIndex], editing: true },
+    });
 
     updateStore(state, { todos: updatedTodos });
   };
@@ -30,8 +30,8 @@ const Todo = (state) => {
 
     const todoIndex = state.todos.findIndex((todo) => todo.id === Number.parseInt(li.id));
     const updatedTodos = Object.assign([...state.todos], {
-        [todoIndex]: { ...state.todos[todoIndex], editing: false, text: newText },
-      });
+      [todoIndex]: { ...state.todos[todoIndex], editing: false, text: newText },
+    });
 
     updateStore(state, { todos: updatedTodos });
   };
