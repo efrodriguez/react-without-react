@@ -1,6 +1,6 @@
-import { App } from "../app";
-import { TodoList } from "../components/todoList";
-import { Todo } from "../components/todo";
+import { App } from "./app";
+import { TodoList } from "./components/todoList";
+import { Todo } from "./components/todo";
 
 const render = (root, state) => {
   root.innerHTML = App(state).render();

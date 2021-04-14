@@ -1,4 +1,4 @@
-import { render } from "./src/lib/render";
+import { render } from "./src/render";
 import { store } from "./src/store/store";
 
 const root = document.getElementById("root");

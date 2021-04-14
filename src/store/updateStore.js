@@ -1,4 +1,4 @@
-import { render } from "../lib/render";
+import { render } from "../render";
 
 const updateStore = (store, newState) => {
   store = Object.assign(store, newState);
