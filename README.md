@@ -6,7 +6,7 @@ A To-do's list app implemented in JavaScript using functional and React concepts
 
 React is a great library to build reusable front-end components that follow a functional approach and simplify state management.
 
-When building transactional components such as lead forms with multiple flows or product widgets that are relatively small but non-trivial and are also part of an SEO content site, you might be tempted to use React because of the development experience it offers. However, importing the React library will add up to the size of your production bundle and it is unnecessary to do so when you are only using it in a small part of your site. Having a large bundle will also impact site load time, potentially affecting SEO metrics. 
+When building transactional components such as lead forms with multiple flows or product widgets that are relatively small but non-trivial and that are also part of an SEO content site, you might be tempted to use React because of the development experience it offers. However, importing the React library will add up to the size of your production bundle and it is unnecessary to do so when you are only using it in a small part of your site. Having a large bundle will also impact site load time, potentially affecting SEO metrics. 
 
 React, however, is just a library based on concepts such as composability, immutability, and the functional programming paradigm. Such concepts can be applied using any language. 
 
