@@ -10,7 +10,7 @@ When building transactional components such as lead forms or product widgets tha
 
 React, however, is just a library based on concepts such as composability, immutability, and the functional programming paradigm. Such concepts can be applied using any language. 
 
-This to-do app tries to demonstrate how you can use plain javascript to build a transactional component that functionally manipulates the DOM, doesn't mutate its state but rather makes copies of the state, and gives the single responsibility to make any state updates to a store component. The app stays away from updating the DOM in multiple places by re-rendering every time the state is updated, just like React does.
+This to-do app tries to demonstrate how you can use plain javascript to build a transactional component that manipulates the DOM in a functional way, doesn't mutate its state but rather makes copies of the state, and gives the single responsibility to make any state updates to a store component. The app stays away from updating the DOM in multiple places by re-rendering every time the state is updated, just like React does.
 
 There are trade-offs to using this approach, of course. The main trade-off is that the HTML is written using javascript template literals. It also might not scale well depending on how big or complex is your transactional component. At that point importing and using React may make more sense.
 
